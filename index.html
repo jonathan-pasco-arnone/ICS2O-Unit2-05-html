@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="My 6th webpage">
+    <meta name="keywordss" content="Hello, World! website">
+    <meta name="author" content="Jonathan Pasco-Arnone">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My webpage</title>
+  </head>
+  <body>
+    <img src="./images/square.png"><br>
+    <form>
+      <label for="length">Length:</label>
+      <input type="text" id="lengthid">
+    </form>
+    <button id="solve">Solve</button>
+    <h2 id="multiply"></h2>
+    <h2 id="areaid"></h2>
+    <script>
+      let length;
+      let area;
+      let math;
+      function getArea() {
+        length = document.getElementById("lengthid").value;
+        area = ("The area of this square is " + length*length);
+        math = (length + " x " + length);
+        document.getElementById("multiply").innerHTML = math;
+        document.getElementById("areaid").innerHTML = area;
+      }
+      document.getElementById("solve").addEventListener("click",getArea);
+    </script>
+  </body>
+</html>
